@@ -139,6 +139,3 @@ Use `const` quando o valor for fixo e conhecido na compilação.
 - `toRadixString(int radix)` – Converte para string em outra base numérica
 
 ---
-
-Este documento apresenta as boas práticas e principais conceitos na declaração de variáveis no Dart, ajudando a melhorar a eficiência e segurança do código.
-
