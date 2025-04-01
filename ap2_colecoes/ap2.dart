@@ -11,10 +11,8 @@ void main() {
   for (var indice = 0; indice < lista.length; indice++) {
     stdout.write('${lista[indice]} ; ');
   }
+  lista.removeWhere((item) => item.isEven);
 
-  for (var indice = 0; indice < lista.length; indice++) {
-    lista.removeWhere((item) => item.isEven);
-  }
   stdout.write('\nLista Atualizada: ');
   for (var indice = 0; indice < lista.length; indice++) {
     stdout.write('${lista[indice]} ; ');

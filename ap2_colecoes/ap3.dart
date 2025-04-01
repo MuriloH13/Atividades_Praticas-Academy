@@ -5,7 +5,7 @@ import 'dart:core';
 void main() {
   final random = Random();
 
-  List<int> lista = List.generate(50, (_) => random.nextInt(11) + 10);
+  List<int> lista = List.generate(50, (_) => random.nextInt(12) + 10);
   List<int> listaunica = lista.toSet().toList();
 
   stdout.write('Lista Original: ');
