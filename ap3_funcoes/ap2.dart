@@ -1,37 +1,37 @@
 import 'dart:math';
 
+int funcaoA(int Function(int) operacao) {
+  Random random = Random();
+
+  int num1 = random.nextInt(100);
+  int num2 = random.nextInt(100);
+
+  print("Número 1: $num1");
+  print("Número 2: $num2");
+
+  int resultado1 = operacao(num1);
+  int resultado2 = operacao(num2);
+
+  print("Resultado 1: $resultado1");
+  print("Resultado 2: $resultado2");
+
+  return resultado1 + resultado2;
+}
+
+int funcaoB(int num) {
+  return num * 2;
+}
+
+int funcaoC(int num) {
+  return num * num;
+}
+
 void main() {
-  List<int> lista1 = List.generate(5, (_) => Random().nextInt(100));
-  List<int> lista2 = List.generate(5, (_) => Random().nextInt(100));
+  print("Executando função A com B:");
+  int resultadoB = funcaoA(funcaoB);
+  print("Soma dos resultados: $resultadoB\n");
 
-  imprimirLista(lista1);
-  imprimirLista(lista2);
-
-  List<int> listaFinal = somarListas(lista1, lista2);
-
-  imprimirLista(listaFinal);
-}
-
-void imprimirLista(List<int> lista) {
-  if (lista.isEmpty) {
-    print("Lista vazia");
-  } else {
-    print("Lista: ${lista.join(', ')}");
-  }
-}
-
-List<int> somarListas(List<int> lista1, List<int> lista2) {
-  if (lista1.length != lista2.length) {
-    print("As listas têm tamanhos diferentes. Retornando lista vazia.");
-    return [];
-  }
-
-  List<int> resultado = [];
-  for (int indice = 0; indice < lista1.length; indice++) {
-    int soma = lista1[indice] + lista2[indice];
-    print("${lista1[indice]} + ${lista2[indice]}");
-    resultado.add(soma);
-  }
-
-  return resultado;
+  print("Executando função A com C:");
+  int resultadoC = funcaoA(funcaoC);
+  print("Soma dos resultados: $resultadoC");
 }
