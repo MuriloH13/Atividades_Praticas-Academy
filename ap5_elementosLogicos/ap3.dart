@@ -1,5 +1,6 @@
 import 'dart:math';
 
+//Havia sido testado o código com argumentos de leitura.
 void main(List<String> args) {
   final random = Random();
 
