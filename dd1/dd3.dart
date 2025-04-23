@@ -12,7 +12,7 @@ void main() {
   print('Tamanho do texto: $tamanho');
   print('Número de frases: $frases');
   print('Numero de vogais: $vogais');
-  print('Consoantes encontradas: ${consoantes.remove({})}');
+  print('Consoantes encontradas: ${consoantes}');
 }
 
 int contaPalavras(String paragrafo, int tamanho) {
